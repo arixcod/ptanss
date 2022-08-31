@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+:root{
+    --top-header-color:rgba(159, 216, 237, 1);
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --clr-secondary: hsla(182, 63%, 54%);
+    --clr-white: #fff;
+    --radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
+}
+
+/* Remove default margin */
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+ 
+a{
+    text-decoration: none;
+    text-align: start;
+    margin:0;
+    padding:0;
+}
+/* Make images easier to work with */
+img,
+picture,svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+
+
+.mobile_nav_toggle{
+  display:none;
+}
+
+.sc_logo{
+    height: 80px;
+    border-radius: 50%;  
+    margin-left:10px; 
+  }
+
+
+
+ @media(max-width:50em){
+
+
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+
+   .ul_flex_nav{
+      z-index: 1000;
+        position: fixed;
+        inset: 0 0 0 40%;
+        flex-direction: column;
+        padding: min(30vh,10rem) 2em;
+        transform: translateX(100%);
+        }
+    .nav_top_class{
+      display: block;
+    }
+
+ 
+  .flex_ul-nav[data-visible="true"]{
+          transform: translateX(0%);   
+    }
+ 
+    .mobile_nav_toggle{
+      display: block;
+      position: absolute;
+      background-color:transparent;
+      background-image: url("./media/images/icon-hamburger.svg");
+      width: 2rem;
+      background-repeat: no-repeat;
+      border: none;
+      aspect-ratio: 1;
+      top:2rem;
+      right: 2rem;
+      z-index: 9999;
+    }
+
+    
+    .mobile_nav_toggle[aria-expanded="true"]{ 
+      background-image: url("./media/images/icon-close.svg");
+    }
+  }
+
+
+
+
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.flex_ul{
+  display: flex;
+}
+
+.nav_top_class{
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: turquoise;
+  display: flex;  
+  }
+
+  .ul_flex_nav{
+    flex-wrap: wrap;
+    background: hsl(0 ,0%,0%/0.5);
+    backdrop-filter: blur(1rem);
+
+  }
+.nav_top_class>ul>li{
+  margin-right: 40px;
+}
+
+
+
+
+
+@supports (    backdrop-filter: blur(1rem)){
+      .ul_flex_nav{
+        background: hsl(0 ,0%,100%/0.1);
+        backdrop-filter: blur(1rem);
+        
+      }
+}
+
+
+.grid-h1-info{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-h1-info>span{
+color: brown;
+font-weight: bold;
+}
+
+
+.marquee{
+  height: 70px;
+  background-color: blueviolet;
+  color: aliceblue;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.grid-container{
+  display: grid ;
+  grid-template-columns:1fr 1fr;
+  gap:2em;
+ 
+}
+
+
+.grid-col-1{
+  padding-left: 20px;
+}
+.grid-col-2>li{
+  padding-left: 40px;
+}
+
+
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
